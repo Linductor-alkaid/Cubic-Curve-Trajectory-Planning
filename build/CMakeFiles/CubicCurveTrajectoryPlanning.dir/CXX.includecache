@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/linductor/dny_trajectory_planning/CubicCurveTrajectoryPlanning.cpp
+CubicCurveTrajectoryPlanning.h
+/home/linductor/dny_trajectory_planning/CubicCurveTrajectoryPlanning.h
+cmath
+-
+iostream
+-
+fstream
+-
+
+/home/linductor/dny_trajectory_planning/CubicCurveTrajectoryPlanning.h
+functional
+-
+
+/home/linductor/dny_trajectory_planning/main.cpp
+iostream
+-
+CubicCurveTrajectoryPlanning.h
+/home/linductor/dny_trajectory_planning/CubicCurveTrajectoryPlanning.h
+cmath
+-
+
