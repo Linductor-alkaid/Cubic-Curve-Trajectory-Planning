@@ -30,6 +30,9 @@ public:
     void computeTrajectory(std::function<void(double)> getAngleCallback,
                            std::function<void(double)> getTorqueCallback,
                            const std::string& filename);
+                           
+    void computeTrajectorynofile(std::function<void(double)> getAngleCallback,
+                           std::function<void(double)> getTorqueCallback);
 
 private:
     // 计算给定时间 t 的角度

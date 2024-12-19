@@ -72,3 +72,17 @@ void CubicCurveTrajectoryPlanning::computeTrajectory(std::function<void(double)>
 
     outFile.close(); // 关闭文件
 }
+
+void CubicCurveTrajectoryPlanning::computeTrajectorynofile(std::function<void(double)> getAngleCallback,
+                                                             std::function<void(double)> getTorqueCallback) {
+    int numSteps = static_cast<int>(totalTime_ / timeStep_); // 计算步数
+    for (int i = 0; i <= numSteps; ++i) {
+        double t = i * timeStep_; // 当前时间
+        double angle = getAngle(t);  // 当前角度
+        double torque = getTorque(t); // 当前力矩
+
+        // 回调输出当前时间的角度和力矩
+        getAngleCallback(angle);
+        getTorqueCallback(torque);
+    }
+}
